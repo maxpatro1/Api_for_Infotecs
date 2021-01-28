@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Информация о городах</h1>
+
+            {% if first.name %}
+                {% if second.name %}
+            <div style="display: flex;
+                flex-direction: row;
+                justify-content: space-around
+                ">
+                <div>
+                    <h3>Geonameid: {{first.id}}</h3>
+                    <h3>Названия: {{first.name}}</h3>
+                    <h3>Место(тип местности): {{first.feature_class}}</h3>
+                    <h3>Код местности: <a href="http://www.geonames.org/export/codes.html" target="_blank">{{first.feature_code}}</a></h3>
+                    <h3>Широта: {{first.latitude}}</h3>
+                    <h3>Долгота: {{first.longitude}}</h3>
+                    <h3>Код страны: {{first.country_code}}</h3>
+                    <h3>Часовой пояс: {{first.timezone}}</h3>
+                    <h3>Дата редактирования: {{first.modification_date}}</h3>
+                </div>
+                 <div>
+                    <h3>Geonameid: {{second.id}}</h3>
+                    <h3>Названия: {{second.name}}</h3>
+                    <h3>Место(тип местности): {{second.feature_class}}</h3>
+                    <h3>Код местности: <a href="http://www.geonames.org/export/codes.html" target="_blank">{{second.feature_code}}</a></h3>
+                    <h3>Широта: {{second.latitude}}</h3>
+                    <h3>Долгота: {{second.longitude}}</h3>
+                    <h3>Код страны: {{second.country_code}}</h3>
+                    <h3>Часовой пояс: {{second.timezone}}</h3>
+                    <h3>Дата редактирования: {{second.modification_date}}</h3>
+                </div>
+            </div>
+                <div style="width: 100vw">
+                    <h2>Севернее: {{first.name}}</h2>
+                    <h2>Часовые пояса {{clock}}</h2>
+                </div>
+                    {% else %}
+                    <h1>ничего не найдено(вы ввели не правильно название одного из городов)</h1>
+                {% endif %}
+                {% else %}
+                <h1>ничего не найдено(вы ввели не правильно название одного из городов)</h1>
+             {% endif %}
+</body>
+</html>

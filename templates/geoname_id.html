@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info</title>
+</head>
+<body>
+    {% if name %}
+    <h1>Информация о городе</h1>
+    <h3>Geonameid: {{id}}</h3>
+    <h3>Названия: {{name}}</h3>
+    <h3>Место(тип местности): {{feature_class}} код местности {{feature_code}}</h3>
+    <h3>Код местности: <a href="http://www.geonames.org/export/codes.html" target="_blank">{{feature_code}}</a></h3>
+    <h3>Широта: {{latitude}}</h3>
+    <h3>Долгота: {{longitude}}</h3>
+    <h3>Код страны: {{country_code}}</h3>
+    <h3>Часовой пояс: {{timezone}}</h3>
+    <h3>Дата редактирования: {{modification_date}}</h3>
+    {% else %}
+    <h1>ничего не найдено</h1>
+     {% endif %}
+</body>
+</html>

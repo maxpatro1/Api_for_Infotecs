@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if posts %}
+     {% for post in posts %}
+    <p>{{post}}</p>
+    {% endfor %}
+    {% else %}
+    <h1>Ничего не найдено</h1>
+     {% endif %}
+</body>
+</html>
